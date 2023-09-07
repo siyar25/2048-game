@@ -53,6 +53,11 @@ async function handleInput(e) {
   const newTile = new Tile(gameBoard);
   grid.randomEmptyCell().tile = newTile;
 
+  if (grid.cells.some(cell => cell.hasWon())) {
+    newTile.waitForTransition(true).then(() => alert("Congratulations! You won!"));
+    return;
+  }
+
   if (!canMoveUp() && !canMoveDown() && !canMoveLeft() && !canMoveRight()) {
     newTile.waitForTransition(true).then(() => alert("You lost!"));
     return;
