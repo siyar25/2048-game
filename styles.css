@@ -1,0 +1,36 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --body-backgroundColor: #333;
+    --game-board-backgroundColor: #CCC;
+    --cell-backgroundColor: #AAA;
+}
+
+body {
+    background-color: var(--body-backgroundColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-size: 7.5vmin;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 20vmin);
+    grid-template-rows: repeat(4, 20vmin);
+    background-color: var(--game-board-backgroundColor);
+    gap: 2vmin;
+    border-radius: 1vmin;
+    padding: 2vmin;
+    position: relative;
+}
+
+.cell {
+    background-color: var(--cell-backgroundColor);
+    border-radius: 1vmin;
+}
