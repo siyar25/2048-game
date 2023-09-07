@@ -106,6 +106,12 @@ class Cell {
     this.mergeTile.remove();
     this.mergeTile = null;
   }
+
+  hasWon() {
+    if (this.tile == null) return;
+
+    return this.tile.value === 2048;
+  }
 }
 
 function createCellElements(gridElement) {

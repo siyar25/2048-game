@@ -29,6 +29,7 @@ export default class Tile {
       "--text-lightness",
       `${backGroundLightness <= 50 ? 90 : 10}%`
     );
+  
   }
 
   set x(value) {
